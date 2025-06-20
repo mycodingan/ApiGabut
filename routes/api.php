@@ -36,7 +36,7 @@ Route::middleware('auth:sanctum')->group(function () {
 
     Route::post('/loan', [LoanController::class, 'store']);
 
-    Route::post('/approve-loan', [LoanController::class, 'approve'])->middleware('throttle:approve-loan,5,1');  
+    Route::post('/approve-loan', [LoanController::class, 'approve'])    ;  
     Route::get('/reports/daily', [ReportController::class, 'daily'])->middleware(['auth:sanctum', 'throttle:60,1']);
 
 });

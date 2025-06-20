@@ -14,6 +14,7 @@ class LoanController extends Controller
 {
     public function approve(Request $request)
     {
+
         $request->validate([
             'loan_id' => 'required|exists:loans,id',
         ]);
